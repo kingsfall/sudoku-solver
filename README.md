@@ -13,7 +13,7 @@ A human player would identify a list of possible numbers for every cell in the 9
 
 # Brief description of functions
 
-##Step 1:
+## Step 1:
 ```
 def find_possible_numbers(row,pointer_y,pointer_x,container,possible_num,possible_num_list):
     for pointer_y in range(row):
@@ -53,6 +53,7 @@ def find_possible_numbers_box(row,pointer_y,pointer_x,container,possible_num,pos
 
 	
 ```
+
 This functions will loop through all the cells in either a row, column or nonet and returns an array possible of numbers based on elimination.
 
 ```
@@ -114,7 +115,7 @@ def fill_with_explicit(container):
 
 This functions will run previous functions in a sequence where, rows, columns and nonets are referenced. Any cell with only 1 number after checking for overlaps will be appended. We will run this functions as a loop to append cells until eventually the numbers are all filled up. The function will return a 9x9 container with appended numbers. The eventual puzzle is not yet solved and we have to move on to the next step of the solver.
 
-##Step 2:
+## Step 2:
 ```
 def impicit_solver_hor_vert(explicit_filled_container):
     pointer_y = 0
@@ -151,15 +152,15 @@ def impicit_solver_hor_vert(explicit_filled_container):
 This function will reference the possible numbers from cells that are not yet filled in rows and then the columns. 
 
 For example, in a row that have 3 cells that are still unfilled, we have possible numbers:
-Cell 1: [1,3,6]
-Cell 2: [2,3,6]
-Cell 3: [1,2,3,6,9]
+1. Cell 1: [1,3,6]
+2. Cell 2: [2,3,6]
+3. Cell 3: [1,2,3,6,9]
 
 Base on elimination, we can see that the number in cell 3 is 9 as Cell 1 and 2 does not have the possibility of filling 9. 9 is not yet filled up and hence the only cell capable of having 9 is cell 3.
 
 With this logic, the function will reference cell 1,2,3 and eliminate the array of possible numbers based on the other cell numbers. The cell that has eventually only 1 number left will be filled. 
 
-##Main routine:
+## Main routine:
 ```
 row = 9
 col = 9
