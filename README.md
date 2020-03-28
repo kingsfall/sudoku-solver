@@ -113,7 +113,9 @@ def fill_with_explicit(container):
     return appendedContainer
 ```
 
-This functions will run previous functions in a sequence where, rows, columns and nonets are referenced. Any cell with only 1 number after checking for overlaps will be appended. We will run this functions as a loop to append cells until eventually the numbers are all filled up. The function will return a 9x9 container with appended numbers. The eventual puzzle is not yet solved and we have to move on to the next step of the solver.
+This functions will run previous functions in a sequence where, rows, columns and nonets are referenced. Any cell with only 1 number after checking for overlaps will be appended. We will run this functions as a loop to append cells until eventually the numbers are all filled up. 
+
+The function will return a 9x9 container with appended numbers. The eventual puzzle is not yet solved and we have to move on to the next step of the solver.
 
 ## Step 2:
 ```
